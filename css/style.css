@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=STIX+Two+Math&family=Uchen&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+
+}
+
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* HEADER */
+
+.nav-headline {
+  position: fixed;  
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#fff;
+  margin-top: 1.2rem;
+}
+
+nav ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  padding: 0 1.3rem;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.8rem;
+}
+
+nav a:hover::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1.4rem;
+  border-bottom: 3px solid #333;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  background-color: #f4f4f4;
+  padding: 0.7rem 0;
+  margin: 1.2rem 0;
+}
+
+
+
+.img-container {
+  position: relative;
+}
+
+.img-container img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+
+.img-container .overlay {
+  position: absolute;
+  color: #fff;
+  top: 7rem;
+  right: 5rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  text-align: center;
+
+}
+
+.img-container p {
+font-size: 0.8rem;
+font-weight: lighter;
+}
+
+.img-container .overlay p:nth-of-type(2) {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* SPRING COLLECTION */
+
+.spring-collection p {
+  margin-left: 2rem;
+  word-spacing: 0.3rem;
+  margin-top: 3rem;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.left-arrow {
+  position: absolute;
+  right: 4.5rem;
+  cursor: pointer;
+}
+.arrow-icons {
+  display: inline-block;
+}
+
+.item-1, .item-2, .item-3 {
+cursor: pointer;
+}
+
+.item-1 p, .item-2 p, .item-3 p {
+margin: 0;
+margin-left: 1rem;
+}
+
+.collection-container-1 {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection-container-1 img {
+  max-width: 440px;
+  margin: 1rem;
+}
+
+/* NEWS SECTION */
+
+
+
+.news {
+  margin-top: 3rem;
+}
+
+.collection-container-2 img {
+  width: 100%;
+  width: 15rem;
+  height: 23rem;
+}
+
+.grid-1 {
+display: grid;
+grid-template-columns: repeat(5, 275px);
+margin: 1.5rem 0;
+justify-content: center;
+align-items: center;
+margin-left: 2rem;
+}
+
+.caption {
+  width: 18rem;
+  margin-top: 1rem;
+}
+
+
+.collection-container-2 .date {
+  color: #c4c4c4;
+}
+
+.grid-2 {
+display: grid;
+grid-template-columns: repeat(5, 275px);
+margin: 1.5rem 0;
+justify-content: center;
+align-items: center;
+margin-left: 2rem;
+}
+
+
+
+/* MOBILE MEDIA QUERIES */
+
+@media(max-width: 375px) {
+
+  nav {
+    text-align: center;
+    width: 50vw;
+    border: 0;
+  }
+
+  .headline {
+    width: 100%;
+  }
+
+  .nav-headline {
+    height: 150px;
+  }
+
+  .img-container {
+    margin-top: 11rem;
+  }
+
+  .img-container img {
+    padding: 0;
+  }
+
+  .img-container .overlay {
+    top: 0;
+    right:0.2rem;
+  }
+
+  .img-container .overlay p {
+    font-size: 0.5rem;
+  }
+
+  .collection-container-1 {
+    flex-direction: column;
+   justify-content: center;
+  }
+
+  .collection-container-1 img {
+    width: 85vw;
+  }
+
+  .fas {
+    display: none;
+  }
+
+  .grid-1, .grid-2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .collection-container-2 img {
+    margin-right: 2rem;
+  }
+
+  .caption {
+    margin: 1rem 0;
+  }
+
+}
+
+
+
+/* TABLET MEDIA QUERIES */
+
+@media(max-width: 768px) {
+
+  nav ul li a {
+    font-size: 0.5rem;
+  }
+  .grid-1, .grid-2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+}
+
+
+/* BIG MONITOR MEDIA QUERIES */
+
